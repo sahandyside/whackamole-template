@@ -5,9 +5,8 @@ import random
 def main():
     try:
         pygame.init()
-        #hello world
         # You can draw the mole with this snippet:
-        # screen.blit(mole_image, mole_image.get_rect(topleft=(x,y)))
+        #screen.blit(mole_image, mole_image.get_rect(topleft=(0,0)))
         mole_image = pygame.image.load("mole.png")
         screen = pygame.display.set_mode((640, 512))
         clock = pygame.time.Clock()
@@ -19,6 +18,9 @@ def main():
             screen.fill("light green")
             pygame.display.flip()
             clock.tick(60)
+            pygame.draw.line(screen, "green", (0, 0), (512, 640))
+            #pygame.draw.line(screen, "black", (0, 0), (640, 640))
+            #screen.blit(mole_image, mole_image.get_rect(topleft=(0, 0)))
     finally:
         pygame.quit()
 
