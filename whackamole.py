@@ -15,12 +15,13 @@ def main():
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
+            screen.blit(mole_image, mole_image.get_rect(topleft=(0, 0)))
+            pygame.draw.line(screen, "green", (0, 0), (640, 512))
             screen.fill("light green")
             pygame.display.flip()
             clock.tick(60)
-            pygame.draw.line(screen, "green", (0, 0), (640, 512))
             #pygame.draw.line(screen, "black", (0, 0), (640, 640))
-            #screen.blit(mole_image, mole_image.get_rect(topleft=(0, 0)))
+
     finally:
         pygame.quit()
 
