@@ -18,7 +18,7 @@ def main():
             screen.fill("light green")
             pygame.display.flip()
             clock.tick(60)
-            pygame.draw.line(screen, "green", (0, 0), (512, 640))
+            pygame.draw.line(screen, "green", (0, 0), (640, 512))
             #pygame.draw.line(screen, "black", (0, 0), (640, 640))
             #screen.blit(mole_image, mole_image.get_rect(topleft=(0, 0)))
     finally:
